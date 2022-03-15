@@ -1,0 +1,44 @@
+# system configuration
+system:
+  name: 'Chat_Demo'
+  port: 8080
+  author: 'ZonzeeLi'
+
+# zap logger configuration
+zap:
+  level: 'info'
+  format: 'console'
+  prefix: '[Chat]'
+  director: 'log'
+  show-line: true
+  encode-level: 'LowercaseColorLevelEncoder'
+  stacktrace-key: 'stacktrace'
+  log-in-console: true
+
+# redis configuration
+redis:
+  db: 2
+  host: '127.0.0.1'
+  port: 6379
+  password: ''
+  pool_size: 100
+
+# mysql configuration
+mysql:
+  host: '127.0.0.1'
+  port: 3306
+  user: 'root'
+  password:
+  dbname: 'chat_demo'
+  config: 'charset=utf8mb4&parseTime=True&loc=Local'
+  max_open_conns: 500
+  max_idle_conns: 100
+  log_mode: ""
+  log_zap: false
+
+mongodb:
+  dbname: 'chat'
+  host: 'localhost'
+  port: 27017
+  password:
+  pool_size: 100
